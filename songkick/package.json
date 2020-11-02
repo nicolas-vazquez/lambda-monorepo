@@ -1,0 +1,19 @@
+{
+  "name": "songkick",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {
+    "serverless-offline": "^6.7.0"
+  }
+}

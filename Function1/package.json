@@ -1,6 +1,0 @@
-{
-  "name": "lambdafunction1",
-  "version": "1.0.0",
-  "description": "A simple Lambda function template.",
-  "main": "index.js"
-}

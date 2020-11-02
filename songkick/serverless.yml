@@ -1,0 +1,39 @@
+service: songkick
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${opt:stage, 'dev'}
+  environment: 
+    API_KEY: 2bpAQkQkQ3wYFukP
+
+functions:
+  getArtisTours:
+    handler: handler.getArtisTours
+    events:
+      - http:
+          path: api/tour/artist/{name}
+          method: get
+
+resources:
+  Resources:
+    CloudFrontDistribution:
+      Type: AWS::CloudFront::Distribution
+      Properties:
+        DistributionConfig:
+          DefaultCacheBehavior:
+            TargetOriginId: MyFirstOrigin
+            ViewerProtocolPolicy: 'redirect-to-https'
+            DefaultTTL: 30
+            ForwardedValues:
+              QueryString: false
+          Enabled: true
+          Origins:
+            - Id: MyFirstOrigin
+              DomainName: rothl47r80.execute-api.us-east-1.amazonaws.com
+              OriginPath: /dev
+              CustomOriginConfig:
+                OriginProtocolPolicy: https-only
+
+plugins:
+  - serverless-offline
