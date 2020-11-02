@@ -4,6 +4,6 @@ ZIP_PARAMS=$3
 
 if [ -n "$PATH_NAME" ]; then cd $PATH_NAME; fi
 
-npm install && npm run-script deploy
+npm install && serverless deploy
 
 exit 0

@@ -30,7 +30,7 @@ resources:
           Enabled: true
           Origins:
             - Id: MyFirstOrigin
-              DomainName: rothl47r80.execute-api.us-east-1.amazonaws.com
+              DomainName: rfz4vy4uj9.execute-api.us-east-1.amazonaws.com
               OriginPath: /dev
               CustomOriginConfig:
                 OriginProtocolPolicy: https-only
