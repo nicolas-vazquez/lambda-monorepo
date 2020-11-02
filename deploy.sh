@@ -4,8 +4,6 @@ ZIP_PARAMS=$3
 
 if [ -n "$PATH_NAME" ]; then cd $PATH_NAME; fi
 
-npm install
-
-sls deploy -s dev
+npm install && npm run-script deploy
 
 exit 0
