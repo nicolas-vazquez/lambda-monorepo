@@ -37,3 +37,4 @@ resources:
 
 plugins:
   - serverless-offline
+  - serverless-mocha-plugin

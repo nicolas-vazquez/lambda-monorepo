@@ -14,6 +14,7 @@
     "lodash": "^4.17.20"
   },
   "devDependencies": {
+    "serverless-mocha-plugin": "^1.12.0",
     "serverless-offline": "^6.7.0"
   }
 }
